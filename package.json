@@ -18,6 +18,7 @@
     "lib",
     "docs",
     "cordis.patch.yml",
+    "screenshots.json",
     "README.md",
     "README.zh.md",
     "LICENSE"
