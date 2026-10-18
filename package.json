@@ -1,6 +1,6 @@
 {
   "name": "dsh-always-on-top",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tiny pin button for DSH Desktop: click once to keep the window always on top.",
   "keywords": [
     "dsh",
