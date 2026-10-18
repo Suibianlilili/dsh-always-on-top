@@ -1,6 +1,6 @@
 {
   "name": "dsh-always-on-top",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tiny pin button for DSH Desktop: click once to keep the window always on top.",
   "keywords": [
     "dsh",
@@ -28,6 +28,14 @@
   },
   "engines": {
     "node": ">=22.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suibianlilili/dsh-always-on-top.git"
+  },
+  "homepage": "https://github.com/Suibianlilili/dsh-always-on-top#readme",
+  "bugs": {
+    "url": "https://github.com/Suibianlilili/dsh-always-on-top/issues"
   },
   "scripts": {
     "toggle-test": "node scripts/toggle-test.mjs"

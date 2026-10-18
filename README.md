@@ -27,6 +27,14 @@
 
 ## 安装
 
+### 从 GitHub（现在就能装）
+
+```powershell
+pnpm -C "$env:USERPROFILE\.dsh\profiles\desktop" add "github:Suibianlilili/dsh-always-on-top"
+
+# 然后把 "dsh-always-on-top" 加进 profile 的 dsh.profile.bundles，重启应用
+```
+
 ### 从 npm（发布后）
 
 ```powershell
@@ -76,9 +84,13 @@ host 由主进程 spawn，因此 `process.ppid` 正好是窗口所属进程。
 | --- | --- |
 | 系统 | Windows 10 / 11 |
 | 运行形态 | DSH Desktop（Electron 桌面版） |
-| DSH 版本 | 0.2.x（`dsh.client` 客户端注入机制） |
+| DSH 版本 | 0.2.x（`dsh.client` 客户端注入机制），实测 0.2.1-rc.2 |
 
 在浏览器里打开的 `dsh web`、或非 Windows 系统上，按钮会隐藏。
+
+按钮位置读取 Electron 的 `env(titlebar-area-*)`（Window Controls Overlay）自适应标题栏：
+DSH 以后调整标题栏高度或窗口按钮宽度时，图钉会自动贴回最小化按钮左侧 8px，不需要改代码；
+读不到这些值（非 Electron 环境、极老内核）时回退到固定位置，`clamp()` 保证不会跑到屏幕外。
 
 ## 限制
 
