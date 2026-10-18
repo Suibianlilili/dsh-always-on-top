@@ -1,0 +1,4 @@
+# dsh-always-on-top bundle patch: register the host fiber.
+- insert:
+    - id: dsh-always-on-top
+      name: dsh-always-on-top
