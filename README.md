@@ -1,5 +1,7 @@
 # dsh-always-on-top
 
+[![npm version](https://img.shields.io/npm/v/dsh-always-on-top.svg)](https://www.npmjs.com/package/dsh-always-on-top)
+
 > 给 DSH Desktop 加一个小图钉：点一下，窗口永远在最上层；再点一下，取消。
 
 一个极小的 DSH 插件（host 路由 + 一个按钮的客户端脚本），没有任何第三方依赖，不需要构建步骤。
@@ -27,22 +29,30 @@
 
 ## 安装
 
-### 从 GitHub（现在就能装）
+包已经发布到 npm：`dsh-always-on-top`。
+
+### 从 npm（推荐）
+
+```powershell
+# DSH CLI（web / tui profile）
+dsh plugin --profile web add dsh-always-on-top
+
+# 直接装进 desktop profile
+pnpm -C "$env:USERPROFILE\.dsh\profiles\desktop" add dsh-always-on-top
+
+# 然后把 "dsh-always-on-top" 加进 profile 的 dsh.profile.bundles，重启应用
+```
+
+> DSH Desktop 的 `desktop` profile 被 Electron 独占，CLI 会拒绝操作它；
+> 这种情况下用下面的手动方式，或在应用内「设置 → 插件 → 添加插件」里安装。
+
+### 从 GitHub
 
 ```powershell
 pnpm -C "$env:USERPROFILE\.dsh\profiles\desktop" add "github:Suibianlilili/dsh-always-on-top"
 
 # 然后把 "dsh-always-on-top" 加进 profile 的 dsh.profile.bundles，重启应用
 ```
-
-### 从 npm（发布后）
-
-```powershell
-dsh plugin --profile desktop add dsh-always-on-top
-```
-
-> DSH Desktop 的 `desktop` profile 被 Electron 独占，CLI 会拒绝操作它；
-> 这种情况下用下面的手动方式，或在应用内「设置 → 插件 → 添加插件」里安装。
 
 ### 手动安装
 
